@@ -4,7 +4,6 @@ import { Country, City } from "country-state-city";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Select from "react-select";
-import { GlobeAsiaAustraliaIcon } from "@heroicons/react/24/solid";
 
 type option = {
   value: {
@@ -54,25 +53,19 @@ const CityPicker = () => {
   return ( 
     <div className="space-y-4">
       <div className="space-y-2">
-        <div className="flex items-center space-x-2 text-white/80">
-          <GlobeAsiaAustraliaIcon className="h-5 w-5 text-white"/>
-          <label htmlFor="country">Country</label>
-        </div>
         <Select   
           value={selectedCountry} 
           onChange={handleSelectedCountry}
           options={options} 
+          placeholder="Select country"
         />
       </div>
 
 
       {selectedCountry && (
         <div className="space-y-2">
-          <div className="flex items-center space-x-2 text-white/80">
-            <GlobeAsiaAustraliaIcon className="h-5 w-5 text-white"/>
-            <label htmlFor="country">City</label>
-          </div>
           <Select   
+            placeholder="Select city"
             value={selectedCity} 
             onChange={handleSelectedCity}
             options={City.getCitiesOfCountry(selectedCountry.value.isoCode

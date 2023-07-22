@@ -37,6 +37,7 @@ function HumidityChart({ results }: Props) {
         maxValue={100}
         valueFormatter={dataFormatter}
         yAxisWidth={40}
+        
       />
     </Card>
   )

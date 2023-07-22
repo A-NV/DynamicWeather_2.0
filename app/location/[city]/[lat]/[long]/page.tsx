@@ -1,6 +1,7 @@
 import { getClient } from "@/apollo-client";
 import CalloutCard from "@/app/components/CalloutCard";
 import HumidityChart from "@/app/components/HumidityChart";
+import InformationPanel from "@/app/components/InformationPanel";
 import RainChart from "@/app/components/RainChart";
 import StatCard from "@/app/components/StatCard";
 import TempChart from "@/app/components/TempChart";
@@ -34,7 +35,14 @@ async function WeatherPage({params: { city, lat, long }}: Props) {
 
   return (
     <div>
-        {/*<InformationPanel/> */}
+       <>
+        <InformationPanel 
+          city={city}
+          results={results}
+          lat={lat}
+          long={long}
+        />
+      </>
       <div className="">
         <div className="p-5">
           <div className="pb-5">

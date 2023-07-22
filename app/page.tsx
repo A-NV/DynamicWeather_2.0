@@ -15,7 +15,7 @@ export default function Home() {
         items-center
         ">
       <Card className="max-w-4xl mx-auto">
-        <Text className="text-5xl text-center mb-10">Dynamic Weather </Text>
+        <Text className="text-5xl text-center mb-10"> Dynamic Weather </Text>
         <Subtitle className="text-xl text-center">Powered by Next.js 13.3, Tailwind CSS, Tremor 2.0 + More!</Subtitle>
 
         <Divider className="my-10"/>
