@@ -57,7 +57,7 @@ const CityPicker = () => {
           value={selectedCountry} 
           onChange={handleSelectedCountry}
           options={options} 
-          placeholder="Select country"
+          placeholder="Select Country"
         />
       </div>
 
@@ -65,7 +65,7 @@ const CityPicker = () => {
       {selectedCountry && (
         <div className="space-y-2">
           <Select   
-            placeholder="Select city"
+            placeholder="Select City"
             value={selectedCity} 
             onChange={handleSelectedCity}
             options={City.getCitiesOfCountry(selectedCountry.value.isoCode
